@@ -36,6 +36,8 @@
       <prop type="string">/systems/electrical/outputs/oat</prop>
       <prop type="string">/systems/electrical/outputs/bus-avionics</prop>
       <prop type="string">/systems/electrical/outputs/alt-light</prop>
+      <prop type="string">/systems/electrical/outputs/transponder</prop>
+      <prop type="string">/systems/electrical/outputs/dme</prop>
     </component>
 
     <component>

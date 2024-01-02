@@ -14,7 +14,7 @@
 		<aircraft-version>0.13.1</aircraft-version>
 
 		<status>beta</status>
-		
+
 		<expected-aircraft-dir-name>PZL-Koliber-family</expected-aircraft-dir-name>
 
 		<rating>
@@ -135,7 +135,7 @@
 		<flight-model>jsb</flight-model>
 		<aero>Systems/PZL-Koliber-160-fdm</aero>
 
-		<menubar include="Dialogs/PZL-Koliber-160A-menu.xml" />
+		<menubar include="gui/dialogs/PZL-Koliber-160A-menu.xml" />
 
 		<systems include="Systems/PZL-Koliber-160A-electrical.xml">
 			<property-rule n="100">
@@ -220,7 +220,7 @@
 					<default-aircraft-scaler-min-knots>1</default-aircraft-scaler-min-knots>
 					<default-aircraft-scaler-max-knots>25</default-aircraft-scaler-max-knots>
 				</groundshake>
-			</headshake> 
+			</headshake>
 		</rendering>
 
 		<flaps>
@@ -321,7 +321,7 @@
 			</tank>
 		</fuel>
 	</consumables>
-	
+
 	<init>
 		<progress>0</progress>
 		<state>.</state>
@@ -335,6 +335,8 @@
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/gtx-327.nas</file>
+			<file>Aircraft/PZL-Koliber-family/Nasal/kr87.nas</file>
 		</pzl_koliber_160a>
 	</nasal>
 </PropertyList>

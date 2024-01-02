@@ -201,7 +201,7 @@
 		<path>Aircraft/PZL-Koliber-family/Models/Instruments/AMPS/AMPS.xml</path>
 		<offsets>
 			<x-m>-0.5848</x-m>
-			<y-m>0.1086</y-m>
+			<y-m>0.12</y-m>
 			<z-m>0.2532</z-m>
 		</offsets>
 	</model>
@@ -238,12 +238,93 @@
 		<offsets>
 			<x-m>-0.5894</x-m>
 			<y-m>0.0665</y-m>
+			<z-m>0.3633</z-m>
+		</offsets>
+	</model>
+
+	<!-- DME -->
+
+<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/DME/kn62a/kn62a.xml</path>
+		<condition>
+			<equals>
+				<property>/options/dme-setup</property>
+				<value>BendixKing KN62A</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5894</x-m>
+			<y-m>0.0665</y-m>
 			<z-m>0.4649</z-m>
 		</offsets>
 	</model>
 
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx320a.xml</path>
+			<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-mala.ac</path>
+			<offsets>
+				<x-m>-0.5894</x-m>
+				<y-m>0.0665</y-m>
+				<z-m>0.4649</z-m>
+			</offsets>
+		</model>
+
+	<!-- Radiocompass -->
+
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/radiocompass/kr87/ki227-00.xml</path>
+		<condition>
+			<equals>
+				<property>/options/radiocompass-setup</property>
+				<value>Bendix/King KR87</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.587</x-m>
+			<y-m> -0.0657</y-m>
+			<z-m>0.565</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/radiocompass/kr87/kr87.xml</path>
+		<condition>
+			<equals>
+				<property>/options/radiocompass-setup</property>
+				<value>Bendix/King KR87</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5801</x-m>
+			<y-m>0.2346</y-m>
+			<z-m>0.4005</z-m>
+		</offsets>
+	</model>
+
+	<!-- Transponder -->
+
+<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx320a/gtx320a.xml</path>
+		<condition>
+			<equals>
+				<property>/options/transponder-setup</property>
+				<value>GARMIN GTX320A</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5801</x-m>
+			<y-m>0.2346</y-m>
+			<z-m>0.3633</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>gtx-327</name>
+		<condition>
+			<equals>
+				<property>/options/transponder-setup</property>
+				<value>GARMIN GTX327</value>
+			</equals>
+		</condition>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx-327/gtx-327.xml</path>
 		<offsets>
 			<x-m>-0.5801</x-m>
 			<y-m>0.2346</y-m>
