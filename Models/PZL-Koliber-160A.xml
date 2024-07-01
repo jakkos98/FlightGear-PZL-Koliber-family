@@ -12,6 +12,23 @@
 		
   </model>
   
+  
+  
+    <model>
+    <path>Aircraft/PZL-Koliber-family/Models/Effects/Smoke/smoke.xml</path>
+    <offsets>
+      <x-m> -0.150 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.733 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+  
+  
+  
 		<defaults>
 			<order-by-xyz/> <!-- also there -->
 		</defaults>
@@ -516,22 +533,6 @@
       <y>0</y>
       <z>0.023092</z>
     </axis>
-  </animation>
-
-  <!--Flight checklists when docs in the cockpit clicked-->
-  <animation>
-    <type>pick</type>
-    <object-name>docs.01</object-name>
-    <object-name>docs.02</object-name>
-    <object-name>docs.03</object-name>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-        <binding>
-            <command>dialog-show</command>
-            <dialog-name>checklist</dialog-name>
-        </binding>
-    </action>
   </animation>
 
   <!-- controls PZL Koliber 160A-->
