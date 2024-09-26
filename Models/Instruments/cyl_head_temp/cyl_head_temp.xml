@@ -46,8 +46,9 @@ PZL Koliber 160A
   <animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
-    <!--   <property>engines/engine[0]/oil-temperature-degf</property> -->
-    <property>engines/engine[0]/cht-degf</property>
+    <!--   <property>engines/engine[0]/oil-temperature-degf</property>
+    <property>engines/engine[0]/cht-degf</property>-->
+    <property>temperature</property>
     <interpolation>
       <entry>
         <ind></ind>
@@ -62,34 +63,22 @@ PZL Koliber 160A
       </entry>
       <entry>
         <ind>200</ind>
-        <dep>-39.00</dep>
+        <dep>-37.00</dep>
       </entry>
       <entry>
         <ind>300</ind>
-        <dep>-23.00</dep>
+        <dep>-14.00</dep>
       </entry>
       <entry>
         <ind>400</ind>
-        <dep>-8.00</dep>
+        <dep>15.00</dep>
       </entry>
       <entry>
         <ind>500</ind>
-        <dep>8.00</dep>
+        <dep>30.00</dep>
       </entry>
       <entry>
-        <ind>600</ind>
-        <dep>24.00</dep>
-      </entry>
-      <entry>
-        <ind>700</ind>
-        <dep>40.00</dep>
-      </entry>
-      <entry>
-        <ind>750</ind>
-        <dep>45.00</dep>
-      </entry>
-      <entry>
-        <ind>1000</ind>
+        <ind>572</ind>
         <dep>45.00</dep>
       </entry>
     </interpolation>
