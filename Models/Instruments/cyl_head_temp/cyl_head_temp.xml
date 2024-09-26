@@ -46,9 +46,8 @@ PZL Koliber 160A
   <animation>
     <type>rotate</type>
     <object-name>wskazowka</object-name>
-    <!--   <property>engines/engine[0]/oil-temperature-degf</property>
-    <property>engines/engine[0]/cht-degf</property>-->
-    <property>temperature</property>
+    <!--   <property>engines/engine[0]/oil-temperature-degf</property>-->
+    <property>engines/engine[0]/cht-degf</property>
     <interpolation>
       <entry>
         <ind></ind>
