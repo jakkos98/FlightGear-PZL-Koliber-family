@@ -16,6 +16,7 @@ layers[image] = root.createChild("image")
 
 layers[image].show();
 liveryCanvas.addPlacement({"node": "fuselage"}); # AND THOSE WITH THE OBJECTS THAT LIVERY NEED TO BE APPLIED
+liveryCanvas.addPlacement({"node": "fuselage.011"}); # AND THOSE WITH THE OBJECTS THAT LIVERY NEED TO BE APPLIED
 liveryCanvas.addPlacement({"node": "hstab"});
 liveryCanvas.addPlacement({"node": "vstab"});
 liveryCanvas.addPlacement({"node": "RudderTrimTab"});
