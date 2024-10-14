@@ -30,11 +30,11 @@
     <interpolation>
       <entry>
         <ind>0</ind>
-        <dep>15</dep>
+        <dep>5</dep>
       </entry>
       <entry>
         <ind>3000</ind>
-        <dep>257</dep>
+        <dep>232</dep>
       </entry>
     </interpolation>
     <axis>
