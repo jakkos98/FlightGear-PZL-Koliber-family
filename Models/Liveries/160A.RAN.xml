@@ -7,7 +7,8 @@
       <livery>
         <name type="string">Real Aeroclub de Navarra</name>
         <texture>Liveries/160A.RAN.png</texture>
-        <livery-change>1</livery-change>
+        <seats>Liveries/seat-RAN.png</seats>
+        <livery-change>2</livery-change>
       </livery>
     </model>
   </sim>

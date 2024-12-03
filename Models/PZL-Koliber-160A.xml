@@ -36,7 +36,8 @@
     <object-name>wing.001</object-name>
 
   </effect>
-  <effect>
+
+<effect>
     <inherits-from>Models/Effects/exterior-glass</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>okno.lewe</object-name>
