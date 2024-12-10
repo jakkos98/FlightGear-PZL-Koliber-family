@@ -5,7 +5,7 @@ Refined propeller configuration for the PZL Koliber 160A to achieve 80 knots IAS
 Propeller: Sensenich 74DM6-0-58
 -->
 
-<propeller version="1.01" name="prop">
+<propeller version="1.03" name="prop">
   <ixx unit="SLUG*FT2"> 3.21 </ixx>
   <diameter unit="IN"> 74.0 </diameter>
   <numblades> 2 </numblades>
