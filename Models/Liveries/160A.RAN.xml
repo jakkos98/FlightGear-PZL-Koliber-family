@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Real Aeroclub de Navarra</name>
+        <texture>Liveries/160A.RAN.png</texture>
+        <seats>Liveries/seat-RAN.png</seats>
+        <livery-change>2</livery-change>
+      </livery>
+    </model>
+  </sim>
+
+</PropertyList>

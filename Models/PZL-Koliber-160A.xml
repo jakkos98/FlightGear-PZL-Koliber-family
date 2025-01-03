@@ -5,7 +5,7 @@
   <path>PZL-Koliber-160A.ac</path>
   <model>
     <name>Instruments</name>
-    <path>Aircraft/PZL-Koliber-family/Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
+    <path>Models/Instruments/PZL-Koliber-160A-Instruments.xml</path>
 			<defaults>
 			<order-by-xyz/> <!-- idk where to add this -->
 		</defaults>
@@ -34,9 +34,12 @@
 		</defaults>
 		
   <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
+    <inherits-from>Models/Effects/exterior-opaque</inherits-from>
     <object-name>fuselage</object-name>
+    <object-name>canopy-back</object-name>
+    <object-name>canopy-front</object-name>
     <object-name>fuselage.011</object-name>
+    <object-name>fuselage.002</object-name>
     <object-name>hstab</object-name>
     <object-name>vstab</object-name>
     <object-name>RudderTrimTab</object-name>
@@ -50,8 +53,9 @@
     <object-name>wing.001</object-name>
 
   </effect>
-  <effect>
-    <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-glass</inherits-from>
+
+<effect>
+    <inherits-from>Models/Effects/exterior-glass</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>okno.lewe</object-name>
     <object-name>okno.prawe</object-name>
@@ -629,8 +633,7 @@
     </center>
     <axis>
       <x>0</x>
-      controls
-      <y>1</y>
+      <y>-1</y>
       <z>0</z>
     </axis>
   </animation>
@@ -657,7 +660,7 @@
     </center>
     <axis>
       <x>0</x>
-      <y>1</y>
+      <y>-1</y>
       <z>0</z>
     </axis>
   </animation>
@@ -2046,7 +2049,7 @@
         ##############################################################################
       -->
       <![CDATA[
-        var livery_update = aircraft.livery_update.new("Aircraft/PZL-Koliber-family/Models/Liveries");
+        var livery_update = aircraft.livery_update.new("Models/Liveries");
       ]]>
     </load>
 

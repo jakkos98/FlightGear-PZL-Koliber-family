@@ -29,3 +29,15 @@ setlistener("sim/signals/fdm-initialized", func {
 	init_progress.close();
 	progress.stop();
 });
+
+setlistener("instrumentation/comm[0]/volume", func(node) {
+	if (node.getValue() >0){
+		setprop("instrumentation/comm[0]/power-btn",1);
+		setprop("instrumentation/comm[0]/operable",1);
+		setprop("systems/electrical/outputs/comm[0]",1);
+	}else{
+		setprop("instrumentation/comm[0]/power-btn",0);
+		setprop("instrumentation/comm[0]/operable",0);
+	}
+	progress.stop();
+});
