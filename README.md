@@ -1,4 +1,4 @@
-# PZL-Koliber-family
+# PZL Koliber family
 
 ![obraz](https://user-images.githubusercontent.com/72032903/190264836-66ec08f8-5351-4bb5-bd48-a179c9de8aa5.png)
 
