@@ -9,13 +9,13 @@
 			<defaults>
 			<order-by-xyz/> <!-- idk where to add this -->
 		</defaults>
-		
+
   </model>
-  
+
 		<defaults>
 			<order-by-xyz/> <!-- also there -->
 		</defaults>
-		
+
   <effect>
     <inherits-from>Aircraft/PZL-Koliber-family/Models/Effects/exterior-opaque</inherits-from>
     <object-name>fuselage</object-name>
@@ -39,7 +39,10 @@
     <object-name>okno.lewe</object-name>
     <object-name>okno.prawe</object-name>
     <object-name>owiewka_przod</object-name>
-    <object-name>canopy-plexi</object-name>
+    <object-name>canopy-plexi.left</object-name>
+    <object-name>canopy-plexi.right</object-name>
+    <object-name>canopy-plexi.overhead</object-name>
+    <object-name>canopy-plexi.overhead</object-name>
   </effect>
   <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
@@ -441,8 +444,13 @@
 
   <animation>
     <type>translate</type>
-    <object-name>canopy-plexi</object-name>
+    <object-name>canopy-plexi.left</object-name>
+    <object-name>canopy-plexi.right</object-name>
+    <object-name>canopy-plexi.overhead</object-name>
     <object-name>canopy-back</object-name>
+    <object-name>placard.canopy.left</object-name>
+    <object-name>placard.canopy.right</object-name>
+    <object-name>zamek.1</object-name>
     <property>controls/door</property>
     <interpolation>
       <entry>
@@ -451,17 +459,82 @@
       </entry>
       <entry>
         <ind>  1</ind>
-        <dep>    1.3</dep>
+        <dep>    1</dep>
       </entry>
     </interpolation>
 
     <axis>
       <x>1.122178</x>
       <y>0.033046</y>
-      <z>-0.050565</z>
+      <z>-0.1</z>
+<!--<z>-0.050565</z>-->
     </axis>
   </animation>
 
+  <animation>
+ <object-name>Object</object-name>
+ <type>rotate</type>
+ <object-name>canopy-plexi.left</object-name>
+ <object-name>canopy-plexi.right</object-name>
+ <object-name>canopy-plexi.overhead</object-name>
+ <object-name>canopy-back</object-name>
+ <object-name>placard.canopy.left</object-name>
+ <object-name>placard.canopy.right</object-name>
+ <object-name>zamek.1</object-name>
+ <property>controls/door</property>
+ <factor>10</factor>
+ <axis>
+  <x>0</x>
+  <y>1</y>
+  <z>0</z>
+ </axis>
+</animation>
+
+  <animation>
+    <type>slider</type>
+    <object-name>canopy-plexi.left</object-name>
+    <object-name>canopy-plexi.right</object-name>
+    <object-name>canopy-plexi.overhead</object-name>
+    <object-name>canopy-back</object-name>
+    <visible>true</visible>
+    <drag-direction>vertical</drag-direction>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/door</property>
+        <factor>0.05</factor>
+        <min>0</min>
+        <max>1</max>
+      </binding>
+    </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <label>Canopy open: %3d%%</label>
+        <tooltip-id>canopy</tooltip-id>
+        <mapping>percent</mapping>
+        <property>controls/door</property>
+      </binding>
+    </hovered>
+  </animation>
+
+
+<!-- Klamka z zewnetrz
+
+<animation>
+<object-name>Object</object-name>
+<type>rotate</type>
+<object-name>zamek.1</object-name>
+<property>controls/door</property>
+<factor>90</factor>
+
+<axis>
+<x>0</x>
+<y>0</y>
+<z>1</z>
+</axis>
+
+</animation> -->
   <!-- Propeller-->
   <animation>
     <name>complete-propeller</name>
@@ -2019,6 +2092,14 @@
     </offsets>
   </model>
 
+  <model>
+    <path>People/people.ac</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+  </model>
   <nasal>
     <load>
       <!--

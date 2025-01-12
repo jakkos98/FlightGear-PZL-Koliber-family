@@ -76,28 +76,39 @@
       <group>
         <layout>vbox</layout>
         <text>
+            <halign>left</halign>
             <label>Avionics configuration</label>
-            <pref-width>400</pref-width>
+            <pref-width>500</pref-width>
         </text>
+        <combo>
+          <halign>right</halign>
+          <pref-width>200</pref-width>
+          <property>/options/preset</property>
+          <value>CUSTOM</value>
+          <value>BendixKing</value>
+          <value>GARMIN</value>
+          <value>Narco</value>
+          <binding>
+          <command>dialog-apply</command>
+          </binding>
+        </combo>
         <hrule/>
         <hrule/>
         <text>
             <halign>left</halign>
             <label>Garmin 196 GPS</label>
         </text>
-          <text>
-            <halign>left</halign>
-            <label>Not yet avaiable!</label>
-          </text>
           <combo>
             <halign>right</halign>
-            <pref-width>150</pref-width>
+            <pref-width>200</pref-width>
 		        <property>/options/garmin196</property>
             <value>OFF</value>
             <value>PANEL</value>
             <value>GLARESHIELD</value>
+            <binding>
+            <command>dialog-apply</command>
+            </binding>
           </combo>
-
 
         <hrule/>
         <text>
@@ -111,9 +122,10 @@
         <combo>
           <halign>right</halign>
 		      <name>clock-setup</name>
-				  <pref-width>150</pref-width>
+				  <pref-width>200</pref-width>
 				  <property>/options/clock-setup</property>
 				  <value>Analog</value>
+          <value>none</value>
           <binding>
 					<command>dialog-apply</command>
 			    </binding>
@@ -124,36 +136,17 @@
             <halign>left</halign>
             <label>Audio panel</label>
         </text>
-        <text>
-          <halign>left</halign>
-          <label>Not yet avaiable!</label>
-        </text>
         <combo>
           <halign>right</halign>
 		      <name>audiopanel-setup</name>
-				  <pref-width>150</pref-width>
+				  <pref-width>200</pref-width>
 				  <property>/options/audiopanel-setup</property>
 				  <value>BendixKing KMA20</value>
+				  <value>BendixKing KMA24</value>
+				  <value>GARMIN GMA340</value>
           <binding>
 					<command>dialog-apply</command>
 			    </binding>
-        </combo>
-
-        <hrule/>
-        <text>
-            <halign>left</halign>
-            <label>DME</label>
-        </text>
-        <combo>
-          <halign>right</halign>
-          <name>dme-setup</name>
-          <pref-width>150</pref-width>
-          <property>/options/dme-setup</property>
-          <value>none</value>
-          <value>BendixKing KN62A</value>
-          <binding>
-          <command>dialog-apply</command>
-          </binding>
         </combo>
 
         <hrule/>
@@ -177,9 +170,11 @@
         <combo>
           <halign>right</halign>
 		      <name>comnav1-setup</name>
-				  <pref-width>150</pref-width>
+				  <pref-width>200</pref-width>
 				  <property>/options/comnav1-setup</property>
+          <value>BendixKing KX 155</value>
 				  <value>BendixKing KX 165</value>
+				  <value>BendixKing KX 165A</value>
           <binding>
 					<command>dialog-apply</command>
 			    </binding>
@@ -194,9 +189,10 @@
     <combo>
       <halign>right</halign>
       <name>nav1-setup</name>
-      <pref-width>150</pref-width>
+      <pref-width>200</pref-width>
       <property>/options/nav1-setup</property>
-      <value>ILS</value>
+      <value>KI206</value>
+      <value>none</value>
       <binding>
       <command>dialog-apply</command>
       </binding>
@@ -223,8 +219,12 @@
         <combo>
           <halign>right</halign>
 		      <name>comnav2-setup</name>
-				  <pref-width>150</pref-width>
+				  <pref-width>200</pref-width>
 				  <property>/options/comnav2-setup</property>
+          <value>BendixKing KX 155</value>
+				  <value>BendixKing KX 165</value>
+				  <value>BendixKing KX 165A</value>
+          <value>none</value>
           <binding>
 					<command>dialog-apply</command>
 			    </binding>
@@ -239,14 +239,33 @@
     <combo>
       <halign>right</halign>
       <name>nav2-setup</name>
-      <pref-width>150</pref-width>
+      <pref-width>200</pref-width>
       <property>/options/nav2-setup</property>
+      <value>KI206</value>
+      <value>none</value>
       <binding>
       <command>dialog-apply</command>
       </binding>
     </combo>
   </group>
       </group>
+
+      <hrule/>
+      <text>
+          <halign>left</halign>
+          <label>DME</label>
+      </text>
+      <combo>
+        <halign>right</halign>
+        <name>dme-setup</name>
+        <pref-width>200</pref-width>
+        <property>/options/dme-setup</property>
+        <value>none</value>
+        <value>BendixKing KN62A</value>
+        <binding>
+        <command>dialog-apply</command>
+        </binding>
+      </combo>
 
         <hrule/>
         <text>
@@ -256,7 +275,7 @@
         <combo>
           <halign>right</halign>
           <name>radiocompass-setup</name>
-          <pref-width>150</pref-width>
+          <pref-width>200</pref-width>
           <property>/options/radiocompass-setup</property>
           <value>none</value>
           <value>Bendix/King KR87</value>
@@ -273,10 +292,28 @@
         <combo>
           <halign>right</halign>
 		      <name>transponder-setup</name>
-				  <pref-width>150</pref-width>
+				  <pref-width>200</pref-width>
 				  <property>/options/transponder-setup</property>
 				  <value>GARMIN GTX320A</value>
 				  <value>GARMIN GTX327</value>
+          <binding>
+					<command>dialog-apply</command>
+			    </binding>
+        </combo>
+
+        <hrule/>
+        <text>
+            <halign>left</halign>
+            <label>GPS (radiostack)</label>
+        </text>
+        <combo>
+          <halign>right</halign>
+		      <name>gps-setup</name>
+				  <pref-width>200</pref-width>
+				  <property>/options/gps-setup</property>
+          <value>none</value>
+				  <value>Bendix/King KLN94</value>
+				  <value>GARMIN GPS 155 TSO</value>
           <binding>
 					<command>dialog-apply</command>
 			    </binding>

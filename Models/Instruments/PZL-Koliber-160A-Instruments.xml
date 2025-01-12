@@ -52,15 +52,6 @@
 	</model>
 
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/ki206/ki206.xml</path>
-		<offsets>
-			<x-m>-0.5910</x-m>
-			<y-m> -0.0657</y-m>
-			<z-m>0.4725</z-m>
-		</offsets>
-	</model>
-
-	<model>
 		<path>Aircraft/PZL-Koliber-family/Models/Instruments/tc/tc.xml</path>
 		<offsets>
 			<x-m>-0.5910</x-m>
@@ -118,10 +109,30 @@
 
 	<model>
 		<path>Aircraft/PZL-Koliber-family/Models/Instruments/RPM/RPM.xml</path>
+		<condition>
+			<not-equals>
+				<property>/options/garmin196</property>
+				<value>PANEL</value>
+			</not-equals>
+		</condition>
 		<offsets>
-			<x-m>-0.5808</x-m>
-			<y-m> 0.0703</y-m>
+			<x-m>-0.586</x-m>
+			<y-m> 0.044</y-m>
 			<z-m> 0.5837</z-m>
+		</offsets>
+	</model>
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/RPM/RPM.xml</path>
+		<condition>
+			<equals>
+				<property>/options/garmin196</property>
+				<value>PANEL</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.586</x-m>
+			<y-m> -0.0657</y-m>
+			<z-m>0.3825</z-m>
 		</offsets>
 	</model>
 
@@ -215,18 +226,82 @@
 		</offsets>
 	</model>
 
+
+			<!-- AUDIOPANEL -->
+
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/kma20/kma20.xml</path>
+		<condition>
+			<equals>
+				<property>/options/audiopanel-setup</property>
+				<value>BendixKing KMA20</value>
+			</equals>
+		</condition>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/AUDIOPANEL/kma20/kma20.xml</path>
 		<offsets>
 			<x-m>-0.5894</x-m>
 			<y-m>0.0664</y-m>
-			<z-m>0.5115</z-m>
+			<z-m>0.5185</z-m>
 		</offsets>
 	</model>
-	<!-- patrz c172p -->
+
+	<model>
+		<condition>
+			<equals>
+				<property>/options/audiopanel-setup</property>
+				<value>BendixKing KMA24</value>
+			</equals>
+		</condition>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/AUDIOPANEL/kma24/kma24.xml</path>
+		<offsets>
+			<x-m>-0.5894</x-m>
+			<y-m>0.0664</y-m>
+			<z-m>0.514</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<condition>
+			<equals>
+				<property>/options/audiopanel-setup</property>
+				<value>GARMIN GMA340</value>
+			</equals>
+		</condition>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/AUDIOPANEL/gma340/gma340.xml</path>
+		<offsets>
+			<x-m>-0.5894</x-m>
+			<y-m>0.0664</y-m>
+			<z-m>0.514</z-m>
+		</offsets>
+	</model>
+
+
+		<!-- COMM NAV 1 -->
+
+		<model>
+			<name>kx155-1</name>
+			<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx155/BendixKing_KX155_navcom1.xml</path>
+			<condition>
+				<equals>
+					<property>/options/comnav1-setup</property>
+					<value>BendixKing KX 155</value>
+				</equals>
+			</condition>
+			<offsets>
+				<x-m>-0.5894</x-m>
+				<y-m>0.0665</y-m>
+				<z-m>0.473</z-m>
+			</offsets>
+		</model>
+
 	<model>
 		<name>kx165-1</name>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/kx165/kx165-1.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx165/kx165-1.xml</path>
+		<condition>
+			<equals>
+				<property>/options/comnav1-setup</property>
+				<value>BendixKing KX 165</value>
+			</equals>
+		</condition>
 		<!-- <overlay>
             <params>
                 <dimming>/systems/electrical/outputs/panel-norm</dimming>
@@ -238,9 +313,192 @@
 		<offsets>
 			<x-m>-0.5894</x-m>
 			<y-m>0.0665</y-m>
-			<z-m>0.3633</z-m>
+			<z-m>0.473</z-m>
 		</offsets>
 	</model>
+
+	<model>
+		<name>kx165A-1</name>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx165A/kx165A-1.xml</path>
+		<condition>
+			<equals>
+				<property>/options/comnav1-setup</property>
+				<value>BendixKing KX 165A</value>
+			</equals>
+		</condition>
+		<!-- <overlay>
+            <params>
+                <dimming>/systems/electrical/outputs/panel-norm</dimming>
+                <red>0.8</red>
+                <green>0.4</green>
+                <blue>0.2</blue>
+            </params>
+        </overlay> -->
+		<offsets>
+			<x-m>-0.577</x-m>
+			<y-m>0.0665</y-m>
+			<z-m>0.4594</z-m>
+		</offsets>
+	</model>
+
+
+
+	<!-- NAV 1 Indicator -->
+
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/ki206/ki206.xml</path>
+		<condition>
+			<equals>
+				<property>/options/nav1-setup</property>
+				<value>KI206</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5910</x-m>
+			<y-m> -0.0657</y-m>
+			<z-m>0.4725</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-80.xml</path>
+		<condition>
+			<equals>
+				<property>/options/nav1-setup</property>
+				<value>none</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5910</x-m>
+			<y-m> -0.0657</y-m>
+			<z-m>0.4725</z-m>
+		</offsets>
+	</model>
+
+	<!-- COMM NAV 2 -->
+
+	<model>
+		<name>kx155-2</name>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx155/BendixKing_KX155_navcom2.xml</path>
+		<condition>
+			<equals>
+				<property>/options/comnav2-setup</property>
+				<value>BendixKing KX 155</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5894</x-m>
+			<y-m>0.0665</y-m>
+			<z-m>0.473</z-m>
+		</offsets>
+	</model>
+
+<model>
+	<name>kx165-2</name>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx165/kx165-2.xml</path>
+	<condition>
+		<equals>
+			<property>/options/comnav2-setup</property>
+			<value>BendixKing KX 165</value>
+		</equals>
+	</condition>
+	<!-- <overlay>
+					<params>
+							<dimming>/systems/electrical/outputs/panel-norm</dimming>
+							<red>0.8</red>
+							<green>0.4</green>
+							<blue>0.2</blue>
+					</params>
+			</overlay> -->
+	<offsets>
+		<x-m>-0.5894</x-m>
+		<y-m>0.0665</y-m>
+		<z-m>0.422</z-m>
+	</offsets>
+</model>
+
+<model>
+	<name>kx165A-2</name>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/COMM_NAV/kx165A/kx165A-2.xml</path>
+	<condition>
+		<equals>
+			<property>/options/comnav2-setup</property>
+			<value>BendixKing KX 165A</value>
+		</equals>
+	</condition>
+	<!-- <overlay>
+					<params>
+							<dimming>/systems/electrical/outputs/panel-norm</dimming>
+							<red>0.8</red>
+							<green>0.4</green>
+							<blue>0.2</blue>
+					</params>
+			</overlay> -->
+	<offsets>
+		<x-m>-0.577</x-m>
+		<y-m>0.0665</y-m>
+		<z-m>0.409</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-mala.xml</path>
+	<condition>
+		<equals>
+			<property>/options/comnav2-setup</property>
+			<value>none</value>
+		</equals>
+	</condition>
+	<offsets>
+		<x-m>-0.5901</x-m>
+		<y-m>0.0665</y-m>
+		<z-m>0.42</z-m>
+	</offsets>
+</model>
+
+	<!-- NAV 2 Indicator -->
+
+<model>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/ki206/ki206-2.xml</path>
+	<condition>
+		<and>
+		<equals>
+			<property>/options/nav2-setup</property>
+			<value>KI206</value>
+		</equals>
+		<not-equals>
+			<property>/options/garmin196</property>
+			<value>PANEL</value>
+		</not-equals>
+	</and>
+	</condition>
+	<offsets>
+		<x-m>-0.5910</x-m>
+		<y-m> -0.0657</y-m>
+		<z-m>0.3825</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-80.xml</path>
+	<condition>
+		<and>
+		<equals>
+			<property>/options/nav2-setup</property>
+			<value>none</value>
+		</equals>
+		<not-equals>
+			<property>/options/garmin196</property>
+			<value>PANEL</value>
+		</not-equals>
+	</and>
+	</condition>
+	<offsets>
+		<x-m>-0.5910</x-m>
+		<y-m> -0.0657</y-m>
+		<z-m>0.3825</z-m>
+	</offsets>
+</model>
 
 	<!-- DME -->
 
@@ -253,25 +511,32 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-0.5894</x-m>
+			<x-m>-0.575</x-m>
 			<y-m>0.0665</y-m>
-			<z-m>0.4649</z-m>
+			<z-m>0.379</z-m>
 		</offsets>
 	</model>
 
 	<model>
-			<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-mala.ac</path>
-			<offsets>
-				<x-m>-0.5894</x-m>
-				<y-m>0.0665</y-m>
-				<z-m>0.4649</z-m>
-			</offsets>
-		</model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-mala.xml</path>
+		<condition>
+			<equals>
+				<property>/options/dme-setup</property>
+				<value>none</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5901</x-m>
+			<y-m>0.0665</y-m>
+			<z-m>0.379</z-m>
+		</offsets>
+	</model>
+
 
 	<!-- Radiocompass -->
 
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/radiocompass/kr87/ki227-00.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/RADIOCOMPASS/kr87/ki227-00.xml</path>
 		<condition>
 			<equals>
 				<property>/options/radiocompass-setup</property>
@@ -285,7 +550,7 @@
 		</offsets>
 	</model>
 	<model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/radiocompass/kr87/kr87.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/RADIOCOMPASS/kr87/kr87.xml</path>
 		<condition>
 			<equals>
 				<property>/options/radiocompass-setup</property>
@@ -294,15 +559,30 @@
 		</condition>
 		<offsets>
 			<x-m>-0.5801</x-m>
-			<y-m>0.2346</y-m>
-			<z-m>0.4005</z-m>
+			<y-m>0.0665</y-m>
+			<z-m>0.345</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-mala.xml</path>
+		<condition>
+			<equals>
+				<property>/options/radiocompass-setup</property>
+				<value>none</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.5901</x-m>
+			<y-m>0.0665</y-m>
+			<z-m>0.345</z-m>
 		</offsets>
 	</model>
 
 	<!-- Transponder -->
 
 <model>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx320a/gtx320a.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/TRANSPONDER/gtx320a/gtx320a.xml</path>
 		<condition>
 			<equals>
 				<property>/options/transponder-setup</property>
@@ -310,7 +590,7 @@
 			</equals>
 		</condition>
 		<offsets>
-			<x-m>-0.5801</x-m>
+			<x-m>-0.585</x-m>
 			<y-m>0.2346</y-m>
 			<z-m>0.3633</z-m>
 		</offsets>
@@ -324,7 +604,7 @@
 				<value>GARMIN GTX327</value>
 			</equals>
 		</condition>
-		<path>Aircraft/PZL-Koliber-family/Models/Instruments/transponder/gtx-327/gtx-327.xml</path>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/TRANSPONDER/gtx-327/gtx-327.xml</path>
 		<offsets>
 			<x-m>-0.5801</x-m>
 			<y-m>0.2346</y-m>
@@ -332,8 +612,74 @@
 		</offsets>
 	</model>
 
-	<!-- Elementy bierne -->
+	<!-- GPS -->
 
+<model>
+		<path>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/kln94/kln94.xml</path>
+		<condition>
+			<equals>
+				<property>/options/gps-setup</property>
+				<value>Bendix/King KLN94</value>
+			</equals>
+		</condition>
+		<offsets>
+			<x-m>-0.59</x-m>
+			<y-m>0.2346</y-m>
+			<z-m>0.4100</z-m>
+		</offsets>
+	</model>
+
+
+	<model>
+			<path>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/gps155tso/gps155.xml</path>
+			<condition>
+				<equals>
+					<property>/options/gps-setup</property>
+					<value>GARMIN GPS 155 TSO</value>
+				</equals>
+			</condition>
+			<offsets>
+				<x-m>-0.59</x-m>
+				<y-m>0.2346</y-m>
+				<z-m>0.4100</z-m>
+			</offsets>
+		</model>
+
+		<!-- GPS Portable-->
+
+	<model>
+			<path>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/garmin196/garmin196_support2.xml</path>
+			<condition>
+				<equals>
+					<property>/options/garmin196</property>
+					<value>PANEL</value>
+				</equals>
+			</condition>
+			<offsets>
+				<x-m>-0.587</x-m>
+				<y-m>0.007</y-m>
+				<z-m>0.5850</z-m>
+			</offsets>
+		</model>
+		<model>
+				<path>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/garmin196/garmin196_support1.xml</path>
+				<condition>
+					<equals>
+						<property>/options/garmin196</property>
+						<value>GLARESHIELD</value>
+					</equals>
+				</condition>
+				<offsets>
+					<x-m>-0.6</x-m>
+					<y-m>0.155</y-m>
+					<z-m>0.69</z-m>
+				</offsets>
+			</model>
+
+
+
+	<!-- Elementy bierne -->
+<!--
 	<model>
 		<path>Aircraft/PZL-Koliber-family/Models/Instruments/elementy/zaslepka-80.xml</path>
 		<offsets>
@@ -342,7 +688,7 @@
 			<z-m>0.3822</z-m>
 		</offsets>
 	</model>
-
+-->
 	<model>
 		<path>Aircraft/PZL-Koliber-family/Models/Instruments/trimmer/trimmer-gauge.xml</path>
 		<offsets>

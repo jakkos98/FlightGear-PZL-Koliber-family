@@ -53,6 +53,10 @@
 				<description>Original author; Old Yasim FDM</description>
 				<nick>WooT</nick>
 			</author>
+			<author n="6">
+				<name>Extra EA-500 development team</name>
+				<description>Models of pilots and passengers</description>
+			</author>
 		</authors>
 
 		<tags>
@@ -335,8 +339,21 @@
 			<file>Aircraft/PZL-Koliber-family/Nasal/liveries.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/CanvasLiverySystem.nas</file>
 			<file>Aircraft/PZL-Koliber-family/Nasal/init.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/gtx-327.nas</file>
-			<file>Aircraft/PZL-Koliber-family/Nasal/kr87.nas</file>
 		</pzl_koliber_160a>
+		<gtx327>
+			<file>Aircraft/PZL-Koliber-family/Nasal/gtx-327.nas</file>
+		</gtx327>
+		<libraries>
+			<file>Aircraft/PZL-Koliber-family/Nasal/kr87.nas</file>
+		</libraries>
+		<kln94>
+			<file>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/kln94/kln94.nas</file>
+		</kln94>
+		<gps155>
+			<file>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/gps155tso/Nasal/gps155.nas</file>
+		</gps155>
+		<garmin196>
+			<file>Aircraft/PZL-Koliber-family/Models/Instruments/GPS/garmin196/garmin196.nas</file>
+		</garmin196>
 	</nasal>
 </PropertyList>

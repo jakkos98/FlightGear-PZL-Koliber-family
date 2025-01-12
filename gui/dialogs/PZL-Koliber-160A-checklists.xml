@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<PropertyList>
+  <group>
+    <name>EMERGENCY</name>
+  <checklist>
+    <title>Engine failure during take-off run - on ground</title>
+    <page>
+      <item>
+        <name></name>
+        <value></value>
+        <condition>
+          <equals>
+            <property></property>
+            <value>0</value>
+          </equals>
+        </condition>
+        <marker>
+          <x-m>0.0</x-m>
+          <y-m>0.0</y-m>
+          <z-m>0.0</z-m>
+          <scale>0.0</scale>
+        </marker>
+        <binding>
+          <command>property-assign</command>
+          <property></property>
+          <value>0</value>
+        </binding>
+      </item>
+    </page>
+  </checklist>
+</group>
+
+<group>
+  <name>NORMAL</name>
+  <checklist>
+    <title>Pre-flight inspection</title>
+    <page>
+      <item>
+        <name>1. Cabin</name>
+      </item>
+      <item>
+        <name>---------------------------</name>
+      </item>
+      <item>
+        <name>Cockpit</name>
+        <value>OPEN TO CHECK FREE MOVEMENT</value>
+      </item>
+      <item>
+        <name>Flaps</name>
+        <value>EXTENDED</value>
+      </item>
+      <item>
+        <name>Magnetos</name>
+        <value>OFF</value>
+      </item>
+      <item>
+        <name>Controls</name>
+        <value>UNLOCKED</value>
+      </item>
+      <item>
+        <name>Trim</name>
+        <value>TAKEOFF POSITION</value>
+      </item>
+      <item>
+        <name>Master switch</name>
+        <value>OFF</value>
+      </item>
+    </page>
+    <page>
+      <item>
+        <name>2. Left wing</name>
+      </item>
+      <item>
+        <name>---------------------------</name>
+      </item>
+      <item>
+        <name>Flaps</name>
+        <value>CHECK FREEDOM OF MOVEMENT AND PLAY OFF THE HINGES</value>
+      </item>
+      <item>
+        <name>Ailerons</name>
+        <value>CHECK FREEDOM OF MOVEMENT AND PLAY OFF THE HINGES</value>
+      </item>
+      <item>
+        <name>Pitot tube</name>
+        <value>CHECK CLEANLINESS, NO CLOGGING AND HEATING</value>
+      </item>
+      <item>
+        <name>Fuel tank</name>
+        <value>CHECK FUEL LEVEL</value>
+      </item>
+      <item>
+        <name>Fuel tank cap</name>
+        <value>CHECK CLOSED AND LOCKED</value>
+      </item>
+      <item>
+        <name>Fuel system</name>
+        <value></value>
+      </item>
+      <item>
+        <name></name>
+        <value></value>
+      </item>
+      <item>
+        <name></name>
+        <value></value>
+      </item>
+    </page>
+  </checklist>
+</group>
+
+
+<group>
+  <name></name>
+  <group>
+    <name></name>
+  <checklist>
+    <title></title>
+    <page>
+      <item>
+        <name></name>
+        <value></value>
+        <condition>
+          <equals>
+            <property></property>
+            <value>0</value>
+          </equals>
+        </condition>
+        <marker>
+          <x-m>0.0</x-m>
+          <y-m>0.0</y-m>
+          <z-m>0.0</z-m>
+          <scale>0.0</scale>
+        </marker>
+        <binding>
+          <command>property-assign</command>
+          <property></property>
+          <value>0</value>
+        </binding>
+      </item>
+    </page>
+  </checklist>
+</group>
+</PropertyList>

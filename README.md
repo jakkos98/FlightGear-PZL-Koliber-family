@@ -35,6 +35,7 @@ Currently developed by:
 and others
 
 -GTX327 from FG launcher PA28
+-GNS530 from FG launcher PA28
 
 Originally by: Mariusz Migut SP-MMA - 3D, Sounds; Patrice Poly (WooT) - Old FDM
 
